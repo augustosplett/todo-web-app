@@ -1,20 +1,30 @@
 "use client";
 
 import TaskList from "@/components/TaskList/TaskList";
+import NewTask from "@/components/NewTask/NewTask";
 import styles from "./page.module.css";
 import React, { useState } from 'react';
 
 const tasks = [
-  { title: 'Task 1aa é uma task muito importante para esse contexto saber o tamanho máximo de um titlu', description: 'Description 1', isdone: false },
-  { title: 'Task 2', description: 'Description 2', isdone: true },
+
 ];
 
 export default function Home() {
+  
+  const [data, setData] = useState(tasks);
+
+  const childToParent = (childData) => {
+    //console.log(childData);
+    setData([...data, childData]);
+    console.log(data)
+  }
+
   return (
     <main className={styles.main}>
 
       <h1>My Task List</h1>
-      <TaskList tasks={tasks} />
+      <NewTask childToParent={childToParent}/>
+      <TaskList tasks={data} />
 
     </main>
   );

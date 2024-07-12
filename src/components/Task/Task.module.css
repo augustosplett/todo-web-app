@@ -4,6 +4,7 @@
     align-items: start;
     justify-content: center;
     max-width: 100%;
+    padding-top: 2rem;
 }
 
 .textContainer {
