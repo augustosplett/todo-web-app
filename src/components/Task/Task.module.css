@@ -1,0 +1,26 @@
+.taskContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.check {
+    margin: 15px;
+}
+
+.title {
+    text-wrap: wrap;
+    word-wrap:break-word;
+}
+
+.description {
+    text-wrap: wrap;
+}

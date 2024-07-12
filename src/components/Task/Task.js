@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./task.module.css";
+import styles from "./Task.module.css";
 import React, { useState } from 'react';
 
 export default function Task({ title, description, isdone }){
@@ -11,14 +11,17 @@ export default function Task({ title, description, isdone }){
     };
 
     return(
-        <>
+        <div className={styles.taskContainer}>
             <input 
+            className={styles.check}
             type="checkbox" 
             checked={done} 
             onChange={handleCheckboxChange} 
             />
-            <h1>{title}</h1>
-            <p>{description}</p>
-        </>
+            <div className={styles.textContainer}>
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.description}>{description}</p>
+            </div>
+        </div>
     );
 }

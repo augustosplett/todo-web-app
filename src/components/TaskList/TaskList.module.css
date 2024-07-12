@@ -1,0 +1,9 @@
+.taskList {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
