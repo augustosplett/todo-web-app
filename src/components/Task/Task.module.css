@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: start;
     justify-content: center;
+    width: 100%;
     max-width: 100%;
     padding-top: 2rem;
 }
@@ -10,7 +11,7 @@
 .textContainer {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
 }
 
 .check {
@@ -20,8 +21,17 @@
 .title {
     text-wrap: wrap;
     word-wrap:break-word;
+    text-decoration: none;
+}
+.titleOverline {
+    text-wrap: wrap;
+    word-wrap:break-word;
+    text-decoration: line-through;
 }
 
 .description {
     text-wrap: wrap;
+}
+.overline {
+    text-decoration: overline;
 }
