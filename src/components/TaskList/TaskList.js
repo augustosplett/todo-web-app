@@ -8,10 +8,10 @@ export default function TaskList({tasks}){
         <div className={styles.taskList}>
             {tasks.map((task, index) => (
                 <Task
-                    key={index}
+                    key={task.id}
                     title={task.title}
                     description={task.description}
-                    isdone={task.isdone}
+                    isdone={task.done}
                 />
             ))}
         </div>
