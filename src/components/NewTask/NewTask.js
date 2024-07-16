@@ -2,13 +2,21 @@
 
 import styles from "./NewTask.module.css";
 import React, { useState } from 'react';
+import api from "@/services/api"
 
 export default function NewTask({childToParent}){
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
         //send the new information back to parent
-        childToParent({ "title": event.target.title.value, "description": event.target.description.value, "isdone": false});
+        const myData = { "title": event.target.title.value, "description": event.target.description.value, "isdone": false};
+        var task;
+        api
+            .post('/tasks', myData)
+            .then( response => childToParent(response.data))
+            .catch((err) => {
+            console.error("ops! there was an error conuming the data from API: " + err);
+            });
         event.target.reset(); 
     };
 

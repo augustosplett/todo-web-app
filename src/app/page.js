@@ -15,9 +15,7 @@ export default function Home() {
   const [data, setData] = useState(tasks);
   
   const childToParent = (childData) => {
-    //console.log(childData);
     setData([...data, childData]);
-    console.log(data)
   }
   
   useEffect(() => {
